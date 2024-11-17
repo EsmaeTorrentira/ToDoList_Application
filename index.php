@@ -27,6 +27,10 @@ $tasks = $stmt->fetchAll();
 <?php foreach ($tasks as $task): ?>
 <li class="task">
 <span><?php echo htmlspecialchars($task['task']); ?></span>
+<div class="buttons">
+<a href="edit_task.php?id=<?php echo $task['id']; ?>" class="edit-btn">Edit</a>
+
+ </div>
 
 </li>
 <?php endforeach; ?>
